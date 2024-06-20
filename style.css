@@ -256,13 +256,31 @@ h2 span {
         right: 285px;
     }
 
+    .hero {
+        padding: 100px;
+    }
+
     .gallery {
         row-gap: 20px;
-        /* grid-template-columns: auto; */
-        /* align-items: center; */
+        grid-template-columns: auto auto;
+        align-items: stretch;
         /* justify-content: center; */
         /* grid-auto-flow: dense; */
-        align-content: start;
+        /* align-content: start; */
+    }
+    .gallery img {
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 20px;
+    }
+    .tall {
+        grid-row: span 1;
+        height: 100%;
+    }
+
+    .wide {
+        grid-column: span 1;
+        align-items: stretch;
     }
 }
 
@@ -277,7 +295,12 @@ h2 span {
     }
     .gallery {
         row-gap: 20px;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+
+    .image-gallery {
+        grid-template-columns: auto;
+        gap: 15px;
     }
 
     h2,
@@ -295,11 +318,11 @@ h2 span {
     }
 
     .tall {
-        grid-row: span 0;
+        grid-row: span 1;
     }
 
     .wide {
-        grid-column: span 0;
+        grid-column: span 1;
     }
 }
 
